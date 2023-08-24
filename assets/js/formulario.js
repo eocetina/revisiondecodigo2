@@ -1,24 +1,15 @@
-var formulario = document.querySelector("#form")
+const formulario = document.querySelector(".formulario") // cmabiamos var por const y la sintaxis de el argumento formulario
 
 formulario.onsubmit = function(e) {
 
-  e.prevent();
+ // e.prevent(); // removi esta funcion por error que me daba al no ser reconocida.
   
   var n = formulario.elements[0]
   var e = formulario.elements[1]
   var na = formulario.elements[2]
-
-  var nombre = n.value
-  var edad = e.value
-
-  var i = na.selectedIndex
-  var nacionalidad = na.options[i].value
-  console.log(nombre, edad)
-  console.log(nacionalidad)
-
-  if (nombre.length === 0) {
-    n.classList.add("error")
-  }
+  console.log(n)
+  console.log(e)
+  console.log(na)
   if (edad < 18 || edad > 120) {
     e.classList.add("error")
   }
